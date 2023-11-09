@@ -1,0 +1,29 @@
+p{
+    border: 2px dotted red ;
+    width: 500px;
+    border-radius: 15px 20px;
+    text-align: center;
+    margin: 200px auto;
+
+}
+div{
+    color: blue;
+    border-top: dotted red;
+    margin-left: auto;
+    margin-right: auto;
+}
+#items li{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    display: inline;
+    border: 2px solid gray; 
+    background-color: blue;
+}
+/* #item2{
+    border: 2px solid orange;
+    position:fixed;
+    background-color: blue;
+    z-index: -1000000;
+
+} */
