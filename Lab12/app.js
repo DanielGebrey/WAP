@@ -16,8 +16,24 @@ app.get('/',(req,res)=>{
     res.status(200).sendFile(path.join(__dirname,'./views/slash.html'));
 })
 
+app.use(express.static(path.join(__dirname,'public')))
+
 
 app.use(userRouter);
 app.use(productRouter);
+
+
+app.use('/what',(req,res)=>{
+    res.send(what);
+})
+
+app.use((req,res,next)=>{
+    res.status(404).send('404 NOT FOUND');
+    })
+
+app.use((err,req,res,next)=>{
+    res.status(200).send('Internal Server Error');
+})
+
 
 app.listen(3000,()=>console.log("running on 3000"));
