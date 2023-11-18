@@ -1,0 +1,29 @@
+GET http://localhost:3000/product
+
+####
+GET http://localhost:3000/product/1
+
+###
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{
+    "title":"Node.js",
+    "description":"excellent",
+    "price": 3200
+}
+
+###
+
+PUT http://localhost:3000/product/11
+Content-Type: application/json
+
+{
+    "title":"java.js",
+    "description":"nice",
+    "price": 3000
+}
+
+###
+
+DELETE http://localhost:3000/product/2

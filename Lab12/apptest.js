@@ -27,26 +27,28 @@ apptest.post('/product',(req,res)=>{
     res.send('data recieved and processed')
 })
 
-app.use('/test',(req,res)=>{
+apptest.use('/test',(req,res)=>{
     res.send('<h>THIS IS FROM TEST MIDLEWARE</h>')
     
 })
 
-// app.use(function(req,res,next){
+// apptest.use(function(req,res,next){
 //     console.log('test')
 //     res.end('Inside empty');
 // })
 
 
-// app.use('/user',(req,res)=>{
-//     res.write('hello...');
-//     next();
-// })
+apptest.get('/pack',(req,res,next)=>{
+    console.log('1.....')
+    next()
+    console.log('1......1')
+})
 
-// app.use('/product',(req,res)=>{
-//     res.write('world');
-//     next();
-// })
+apptest.get('/pack',(req,res,next)=>{
+    console.log('2........');
+    next();
+    console.log('2.....2');
+})
 
 
 apptest.listen(9999,()=>console.log('listen on 9999'));

@@ -10,6 +10,7 @@ const productRouter = require('./routes/product-route.js')
 app.set('port',process.env.PORT || 3000);
 const port = app.get('port');
 
+
 app.use(express.urlencoded({extended:true}));
 
 app.get('/',(req,res)=>{
